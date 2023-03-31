@@ -1,0 +1,87 @@
+/*
+Assessment Requirements
+1. Create a variable that can hold a number of NFT's. What type of variable might this be?
+2. Create an object inside your mintNFT function that will hold the metadata for your NFTs. 
+   The metadata values will be passed to the function as parameters. When the NFT is ready, 
+   you will store it in the variable you created in step 1
+3. Your listNFTs() function will print all of your NFTs metadata to the console (i.e. console.log("Name: " + someNFT.name))
+4. For good measure, getTotalSupply() should return the number of NFT's you have created
+*/
+
+// create a variable to hold your NFT's
+const NFTs = []
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function mintNFT(_PlanetName, _PlanetColor, _PlanetRadius, _PlanetLocation) 
+{
+    const NFT = {
+        "PlanetName":  _PlanetName,
+        "PlanetColor": _PlanetColor,
+        "PlanetRadius": _PlanetRadius,
+        "PlanetLocation": _PlanetLocation,
+    }
+    NFTs.push (NFT);
+    console.log ("Minted: " + _PlanetName);
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs() {
+    for(let i = 0; i < NFTs.length; i++){
+        console.log("\nID \t\t\t\t" + (i + 1));
+        console.log("Planet Name: \t\t" + NFTs[i].PlanetName);
+        console.log("Planet Color: \t\t" + NFTs[i].PlanetColor);
+        console.log("Planet Radius: \t\t" + NFTs[i].PlanetRadius);
+        console.log("Planet Location: \t" + NFTs[i].PlanetLocation);
+    }
+
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply () {
+    console.log("\n" + NFTs.length);
+}
+
+// call your functions below this line
+mintNFT ("Mercury", "Dark gray", "2,439.7 km", "First planet from the Sun");
+mintNFT ("Earth", "Vibrant blue", "6,371 km", "Third planet from the Sun");
+mintNFT ("Jupiter", "Yellow-Orange", "69,911 km", "Fifth planet from the sun");
+mintNFT ("Uranus", "blue-green", "25,362 km", "Seventh planet from the sun");
+listNFTs();
+getTotalSupply();
+OUTPUT:
+
+[Running] node "/workspace/Beginning-Javascript/playground.js"
+Minted: Mercury
+Minted: Earth
+Minted: Jupiter
+Minted: Uranus
+
+ID 				1
+Planet Name: 		Mercury
+Planet Color: 		Dark gray
+Planet Radius: 		2,439.7 km
+Planet Location: 	First planet from the Sun
+
+ID 				2
+Planet Name: 		Earth
+Planet Color: 		Vibrant blue
+Planet Radius: 		6,371 km
+Planet Location: 	Third planet from the Sun
+
+ID 				3
+Planet Name: 		Jupiter
+Planet Color: 		Yellow-Orange
+Planet Radius: 		69,911 km
+Planet Location: 	Fifth planet from the sun
+
+ID 				4
+Planet Name: 		Uranus
+Planet Color: 		blue-green
+Planet Radius: 		25,362 km
+Planet Location: 	Seventh planet from the sun
+
+4
+
+[Done] exited with code=0 in 0.062 seconds
