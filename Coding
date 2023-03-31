@@ -50,6 +50,7 @@ mintNFT ("Jupiter", "Yellow-Orange", "69,911 km", "Fifth planet from the sun");
 mintNFT ("Uranus", "blue-green", "25,362 km", "Seventh planet from the sun");
 listNFTs();
 getTotalSupply();
+
 OUTPUT:
 
 [Running] node "/workspace/Beginning-Javascript/playground.js"
