@@ -50,39 +50,3 @@ mintNFT ("Jupiter", "Yellow-Orange", "69,911 km", "Fifth planet from the sun");
 mintNFT ("Uranus", "blue-green", "25,362 km", "Seventh planet from the sun");
 listNFTs();
 getTotalSupply();
-
-OUTPUT:
-
-[Running] node "/workspace/Beginning-Javascript/playground.js"
-Minted: Mercury
-Minted: Earth
-Minted: Jupiter
-Minted: Uranus
-
-ID 				1
-Planet Name: 		Mercury
-Planet Color: 		Dark gray
-Planet Radius: 		2,439.7 km
-Planet Location: 	First planet from the Sun
-
-ID 				2
-Planet Name: 		Earth
-Planet Color: 		Vibrant blue
-Planet Radius: 		6,371 km
-Planet Location: 	Third planet from the Sun
-
-ID 				3
-Planet Name: 		Jupiter
-Planet Color: 		Yellow-Orange
-Planet Radius: 		69,911 km
-Planet Location: 	Fifth planet from the sun
-
-ID 				4
-Planet Name: 		Uranus
-Planet Color: 		blue-green
-Planet Radius: 		25,362 km
-Planet Location: 	Seventh planet from the sun
-
-4
-
-[Done] exited with code=0 in 0.062 seconds
