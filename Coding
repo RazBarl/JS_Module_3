@@ -9,44 +9,42 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-const NFTs = []
+const RazNFTs = []
+
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
 function mintNFT(_PlanetName, _PlanetColor, _PlanetRadius, _PlanetLocation) 
 {
-    const NFT = {
+    const NFT = 
+    {
         "PlanetName":  _PlanetName,
         "PlanetColor": _PlanetColor,
         "PlanetRadius": _PlanetRadius,
         "PlanetLocation": _PlanetLocation,
     }
-    NFTs.push (NFT);
+    RazNFTs.push (NFT);
     console.log ("Minted: " + _PlanetName);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
-function listNFTs() {
-    for(let i = 0; i < NFTs.length; i++){
-        console.log("\nID \t\t\t\t" + (i + 1));
-        console.log("Planet Name: \t\t" + NFTs[i].PlanetName);
-        console.log("Planet Color: \t\t" + NFTs[i].PlanetColor);
-        console.log("Planet Radius: \t\t" + NFTs[i].PlanetRadius);
-        console.log("Planet Location: \t" + NFTs[i].PlanetLocation);
+function listNFTs() 
+{
+    for(let i = 0; i < RazNFTs.length; i++)
+    {
+        console.log(RazNFTs[i])
     }
 
 }
 
 // print the total number of NFTs we have minted to the console
-function getTotalSupply () {
-    console.log("\n" + NFTs.length);
+function getTotalSupply () 
+{
+    console.log(RazNFTs.length);
 }
 
 // call your functions below this line
 mintNFT ("Mercury", "Dark gray", "2,439.7 km", "First planet from the Sun");
-mintNFT ("Earth", "Vibrant blue", "6,371 km", "Third planet from the Sun");
-mintNFT ("Jupiter", "Yellow-Orange", "69,911 km", "Fifth planet from the sun");
-mintNFT ("Uranus", "blue-green", "25,362 km", "Seventh planet from the sun");
 listNFTs();
 getTotalSupply();
